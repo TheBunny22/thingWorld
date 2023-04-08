@@ -88,6 +88,8 @@ window.onload = () => {
     const dateStamp = `  ${year}-${month}-${day}`;
     return `${dateStamp}${timeStamp}`;
   };
+
+  
   // Create an object to store colors by topic
   const colorsByTopic = {};
   const checkid = () => {
