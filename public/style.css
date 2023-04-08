@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MyCustomFont",'Nunito';
+}
+nav {
+  background: #252525;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.toolbar {
+  box-shadow: -2px 0px 10px black;
+  padding: 1rem;
+}
+.hostname {
+  max-width: 15rem;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  text-align: center;
+  font-size: 14px;
+  background: white;
+  /* margin: 1rem; */
+  padding: 0.3rem;
+}
+#connect_button {
+  font-size: 18px;
+  padding: 4px 3rem;
+  border: none;
+  background: red;
+  justify-self: center;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+#publishForm {
+  display: grid;
+  margin: auto;
+  gap: 1rem;
+  max-width: 15rem;
+}
+.msg {
+  list-style: none;
+  padding: 0.5rem;
+  /* background: --i; */
+  border-radius: 0.3rem;
+  font-size: medium;
+  margin: 1rem;
+  max-width: 20rem;
+}
+#sidebar {
+  padding: 1rem;
+}
+#messageBox {
+  /* display: flex;
+  flex-direction: column-reverse; */
+  height: 75vh;
+  overflow: auto;
+}
+.hisel {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px dashed black;
+  margin: 1rem;
+}
+footer {
+  background: #252525;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+#subbt,
+#pubbt {
+  justify-self: center;
+  font-size: 16px;
+  font-weight: 550;
+  border: none;
+  background: lightgreen;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+#subscribeTopic {
+  display: grid;
+  max-width: 15rem;
+  margin: 1rem auto;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #sidebar {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  main {
+    grid-template-columns: 3fr 2fr;
+  }
+}

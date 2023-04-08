@@ -1,0 +1,18 @@
+{
+  "name": "thingworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "launch":"node index.js"
+   
+  },
+  "author": "Harihar Upadhyay",
+  "license": "ISC",
+  "dependencies": {
+    "aedes": "^0.49.0",
+    "net": "^1.0.2",
+    "websocket-stream": "^5.5.2"
+  }
+}

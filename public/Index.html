@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Things World</title>
+  </head>
+  <body>
+    
+    <nav>
+      <div class="nav-in">
+        <!-- <img src="" alt/="Logo" /> -->
+        <h2 style="color: white">
+          things<span style="color: lightblue">world.cloud</span>
+        </h2>
+      </div>
+      <span class="hostname"> Host : mqtt://thingsworld.cloud </span>
+      <span class="hostname"> Port : 1883 </span>
+      <span style="display: flex;gap: 1rem;align-items: center;">
+        <button id="connect_button" onclick="BuildConnection()">
+          Disconnected
+        </button>
+       
+      </span>
+    </nav>
+    <main>
+      <div id="sidebar">
+        <h2>Message</h2>
+
+        <ul id="messageBox">
+          <span
+            style="
+              height: 75vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              opacity: 60%;
+            "
+            ><img
+              src="./icons/no-spam.png"
+              alt="no message"
+              height="100px"
+              srcset=""
+            />
+
+            <h3>No Message...</h3></span
+          >
+        </ul>
+        
+      </div>
+      <!-- <div id="history">
+        <h2>History</h2>
+        <div id="lastwork">
+          <div id="el1" class="hisel">
+            <button class="xbt">X</button>
+            Published : Message to Topic
+          </div>
+          <div id="el2" class="hisel">
+            <button class="xbt">X</button>
+            Subscribed :  Topic
+          </div>
+        </div>
+      </div> -->
+      <div class="toolbar">
+        <div id="publishForm">
+          <h2>Publish</h2>
+          <label for="Topic">Topic</label>
+          <input type="text" id="pubtopic" name="Topic" />
+          <label for="message">message</label>
+          <textarea id="message" cols="20" rows="10"> </textarea>
+          <button id="pubbt" disabled onclick="PublishMsg()">Publish</button>
+        </div>
+        <div id="subscribeTopic">
+          <h2>Subscribe</h2>
+          <label for="SubTopic">Topic</label>
+          <input type="text" id="SubTopic" />
+          <button id="subbt" disabled onclick="subscribeTopic()">Subscribe</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      thingsworld.cloud &copy; reserved
+      <br />
+      Build with Love in India by
+      <a style="text-decoration: none; color: lightblue;" href="https://in.linkedin.com/in/harihar-upadhyay-622388204"
+        >Harihar Upadhyay</a
+      >
+    </footer>
+  </body>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <!-- <script type="text/javascript" src="http://www.hivemq.com/demos/websocket-client/js/mqttws31.js"></script>   -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script> -->
+  <script src="script.js"></script>
+</html>

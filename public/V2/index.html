@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Things World</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script></script>
+  <body>
+    <!-- navbar start -->
+    <div class="nacoin">
+      <nav>
+        <!-- <h2 style="color: #ffc000">
+          things<span style="color: lightblue">world.cloud</span>
+        </h2> -->
+        <img src="./logo.png"  id="logo" alt="" srcset="" />
+        <span class="text"> Websocket Client Showcase </span>
+      </nav>
+    </div>
+    <!-- navbar end -->
+    <!-- main container start -->
+    <div class="container">
+      <!-- title row -->
+      <div id="banner-cover">
+        <div class="banner">
+          <!-- <div>
+            <img class="logo" src="./app logo 1.png" alt="" srcset="" />
+          </div> -->
+          <div class="solgan">
+            <h3>Need a fully managed MQTT broker?</h3>
+            <p>
+              Get your own Cloud broker and connect up to 100 devices for free.
+            </p>
+          </div>
+          <div>
+            <button class="but">Get Your Free Account</button>
+          </div>
+        </div>
+      </div>
+      <div class="conectbox">
+        <div class="row r1">
+          <h2>Connection</h2>
+          <span class="rcol2">
+            <div id="conectindi"></div>
+            <button class="btcli" id="conectHide">
+              <div class="icon-arrow-chevron"></div>
+            </button>
+          </span>
+        </div>
+        <!-- conection panel start -->
+        <div class="row" id="conectpanel" style="display: block">
+          <div class="panel">
+            <div class="prow prow1">
+              <div class="column">
+                <label>Host</label>
+                <input
+                  id="host"
+                  class="inputhieght"
+                  type="text"
+                  value="broker.thingsworld.cloud"
+                />
+              </div>
+              <div class="column">
+                <label>Port</label>
+                <input id="port" class="inputhieght" type="text" value="9001" />
+              </div>
+              <div class="column">
+                <label>ClientID</label>
+                <input
+                  id="ClientID"
+                  class="inputhieght"
+                  type="text"
+                  value="*****"
+                />
+              </div>
+              <div class="column">
+                <label>&nbsp; </label>
+
+                <input
+                  class="inputhieght"
+                  id="conectbt"
+                  type="button"
+                  value="Connect"
+                />
+              </div>
+            </div>
+            <!-- panel 1 row 2 -->
+            <div class="prow prow2">
+              <div class="column">
+                <label>Username</label>
+                <input id="username" class="inputhieght" type="text" />
+              </div>
+              <div class="column">
+                <label>Password</label>
+                <input id="Password" class="inputhieght" type="text" />
+              </div>
+              <div class="column">
+                <label>Keep Alive</label>
+                <input
+                  id="keepAlive"
+                  class="inputhieght"
+                  type="text"
+                  value="60"
+                />
+              </div>
+              <div class="column">
+                <label>&nbsp; </label>
+              </div>
+            </div>
+            <!-- row 3 panel 1 -->
+            <div class="prow prow3">
+              <div class="column">
+                <label>Last-Will Topic</label>
+                <input
+                  id="willTopic"
+                  class="inputhieght"
+                  type="text"
+                  value=" "
+                />
+              </div>
+              <div class="column">
+                <label>Last-Will Qos</label>
+                <select id="willqos" class="inputhieght">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </div>
+
+              <div class="column">
+                <label>&nbsp; </label>
+              </div>
+            </div>
+            <!-- row 4 Panel 1 -->
+            <div class="prow">
+              <div class="column">
+                <label>Last-Will Message</label>
+                <textarea name="" id="willmsg" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- panel 2  -->
+      <div class="msgSend">
+        <div id="publish">
+          <!-- title start -->
+          <div class="conectbox">
+            <div class="row r2">
+              <h3>Publish</h3>
+              <span class="rcol2 rcol3">
+                <button class="btcli" id="pubHide">
+                  <div class="icon-arrow-chevron"></div>
+                </button>
+              </span>
+            </div>
+          </div>
+          <!-- title end -->
+          <!-- publis panel -->
+          <div class="row" id="publishpanel" style="display: block">
+            <div class="panel">
+              <div class="prow prow4">
+                <div class="column">
+                  <label>Topic</label>
+                  <input id="pubtopic" class="inputhieght" type="text" />
+                </div>
+                <div class="column">
+                  <label>Qos</label>
+                  <select id="pubQos" class="inputhieght">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+                <div class="column">
+                  <label>&nbsp; </label>
+
+                  <input
+                    id="PublishBt"
+                    class="inputhieght"
+                    type="button"
+                    value="Publish"
+                  />
+                </div>
+              </div>
+              <div class="prow">
+                <div class="column">
+                  <label>Message</label>
+                  <textarea name="" id="pubMsg" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end publish panel -->
+        </div>
+
+        <!-- subscribe panel -->
+
+        <div id="subscribe">
+          <!-- title -->
+          <div class="row r2">
+            <h3>Subscribe</h3>
+            <span class="rcol2 rcol3">
+              <button class="btcli" id="subHide">
+                <div class="icon-arrow-chevron"></div>
+              </button>
+            </span>
+          </div>
+          <!-- title -->
+          <!-- subscribe panel -->
+          <div class="row" id="subPanel" style="display: block">
+            <div class="panel">
+              <div class="prow">
+                <div class="column">
+                  <input
+                    id="AddSub"
+                    class="inputhieght"
+                    type="button"
+                    value="Add New Topic To Subscribe"
+                  />
+                </div>
+                <div id="subscribeTopicPanel">
+                  <!--                   
+                  <div class="submessage">
+                    <div class="color" style="background: red">&nbsp;</div>
+                    <div class="inerSub">
+                      <div class="inersubTitle">
+                        <h6>qos</h6>
+                        <h5 class="unSubcribe" style="color: blue">x</h5>
+                        </div>
+                      <div style="text-align: center">Topic</div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end subscribe panel -->
+        </div>
+      </div>
+      <!--  -->
+      <div id="message">
+        <div class="Message">
+          <div class="conectbox">
+            <div class="row r2">
+              <h3>Message</h3>
+              <span class="rcol2 rcol3">
+                <button class="btcli" id="msgHide">
+                  <div class="icon-arrow-chevron"></div>
+                </button>
+              </span>
+            </div>
+          </div>
+          <!-- title end here -->
+          <div class="row" id="msgPanel" style="display: block">
+            <div class="panel">
+              <div class="prow7" id="messageBox">
+                <!-- <div class="submessage income">
+                  <div class="color" style="background: red">&nbsp;</div>
+                  <div class="inerSub">
+                    <div class="inersubTitle">
+                      <h6>qos</h6>
+                      <h6>qos</h6>
+                      <h6>qos</h6>
+                    </div>
+                    <div style="text-align: center">message</div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="prow prow5">
+          <div class="column">
+            <label>Color</label>
+            <div class="inputhieght" id="Rcolor"></div>
+          </div>
+          <div class="column">
+            <label>Qos</label>
+            <select id="SubQos" class="inputhieght">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+
+          <div class="column" width="100%">
+            <label>Topic</label>
+            <input
+              type="text"
+              class="inputhieght"
+              name=""
+              id="subscribeTopic"
+            />
+          </div>
+          <div class="column">
+            <span>&nbsp;</span>
+            <input
+              id="SubTopicBt"
+              type="button"
+              class="inputhieght"
+              value="Subscribe"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./Ux.js"></script>
+  <script src="./conect.js"></script>
+</html>
